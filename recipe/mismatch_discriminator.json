@@ -1,0 +1,30 @@
+{
+  "each": {
+    "train/gpu": [
+      2
+    ],
+    "project/name": [
+      "{date}_base_mismatch_discriminator_32_64_64"
+    ],
+    "model/base_num_z_encoder": [
+      32
+    ],
+    "model/base_num_z_generator": [
+      64
+    ],
+    "model/base_num_z_discriminator": [
+      64
+    ]
+  },
+  "all": {
+    "dataset/images_list": "/path/to/json",
+    "dataset/num_test": 60,
+    "loss/blend/encoder/activity_regularization": 0.001,
+    "loss/blend/encoder/fake_mismatch_lsm": 0,
+    "train/batchsize": 8,
+    "train/save_iteration": 5000,
+    "project/result_path": "/path/to/result",
+    "project/comment": "mismatch_discriminator",
+    "project/tags": []
+  }
+}

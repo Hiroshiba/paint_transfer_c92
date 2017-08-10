@@ -1,0 +1,56 @@
+{
+  "dataset": {
+    "images_glob": null,
+    "images_list": null,
+    "cache_path": null,
+    "num_test": 600
+  },
+  "model": {
+    "name": null,
+    "base_num_z_encoder": 32,
+    "base_num_z_generator": 64,
+    "base_num_z_discriminator": 32
+  },
+  "loss": {
+    "name": null,
+    "blend": {
+      "encoder": {
+        "mse": 1,
+        "fake_mismatch_lsm": 1,
+        "activity_regularization": 0
+      },
+      "generator": {
+        "mse": 1
+      },
+      "mismatch_discriminator": {
+        "match_lsm": 1,
+        "mismatch_lsm": 1
+      }
+    }
+  },
+  "train": {
+    "batchsize": 32,
+    "gpu": -1,
+    "log_iteration": 100,
+    "save_iteration": 1000,
+    "optimizer": {
+      "default": {
+        "name": "adam",
+        "weight_decay": null,
+        "gradient_clipping": null
+      },
+      "encoder": "default",
+      "generator": "default",
+      "mismatch_discriminator": "default"
+    },
+    "initial_weight": {
+      "default": null
+    }
+  },
+  "project": {
+    "name": "test_{date}_{hash}",
+    "result_path": "/path/to/result",
+    "tags": [],
+    "comment": ""
+  }
+}
